@@ -1,0 +1,33 @@
+[project]
+name = "tedata"
+version = "0.3.52"
+
+description = "Download data from Trading Economics for free and without any account or API key. Uses selenium, javascript & bs4 to scrape data. Trading Economics is one of the greatest stores of economic data on the web and contains millions of time-series for hundreds of different countries."
+
+authors = [
+    {name = "the_macro_bootlegger"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">= 3.9"
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "pandas>=2.2.1",
+    "selenium>=4.27.1",
+    "plotly>=5.18.0",
+    "kaleido>=0.2.0",
+    "openpyxl>=3.0.0",
+    "nbformat>=4.2.0",
+]
+
+[project.urls]
+"Repository" = "https://github.com/HelloThereMatey/tedata"
+"Bug Tracker" = "https://github.com/HelloThereMatey/tedata/issues"
+"Firefox Download" = "https://www.mozilla.org/firefox/new/"
+
+[project.scripts]
+tedata = "tedata.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

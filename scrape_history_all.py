@@ -51,7 +51,8 @@ def scrape_te_history(url, material_name, material_type, material_unit, material
                                 material_price=str(price),
                                 material_unit=material_unit,
                                 material_currency=material_currency,
-                                price_date=date_str
+                                price_date=date_str,
+                                source=url
                             )
                         return True
                     else:
@@ -120,7 +121,8 @@ def scrape_imarc_latest_as_history(url, material_base_name, regions):
                                 material_price=price,
                                 material_unit="Kg",
                                 material_currency="USD",
-                                price_date=current_date.strftime('%Y-%m-%d')
+                                price_date=current_date.strftime('%Y-%m-%d'),
+                                source=url
                             )
                             current_date += timedelta(days=1)
             return True

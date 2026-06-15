@@ -150,7 +150,8 @@ def scrape_imarc_commodity(scraper, url, base_name, regions):
                         material_price=str(price),
                         material_unit="Kg",
                         material_currency="USD",
-                        price_date=date.strftime('%Y-%m-%d')
+                        price_date=date.strftime('%Y-%m-%d'),
+                        source=url
                     )
                     if res.get("status") != "error":
                         success_count += 1

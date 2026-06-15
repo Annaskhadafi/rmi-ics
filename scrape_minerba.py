@@ -88,7 +88,8 @@ def main():
                         material_price=clean_price,
                         material_unit=mat_unit,
                         material_currency=mat_curr,
-                        price_date=today_date
+                        price_date=today_date,
+                        source=url
                     )
             
         print("Selesai memproses data Minerba.")

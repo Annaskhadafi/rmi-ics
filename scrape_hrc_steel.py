@@ -62,7 +62,8 @@ def main():
                     material_price=price,
                     material_unit="T",
                     material_currency="USD",
-                    price_date=datetime.now().strftime('%Y-%m-%d')
+                    price_date=datetime.now().strftime('%Y-%m-%d'),
+                    source=url
                 )
                 print(f"API Result: {result}")
             else:

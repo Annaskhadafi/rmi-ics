@@ -56,7 +56,8 @@ def main():
                         material_price=price,
                         material_unit="Kg",
                         material_currency="USD Cents",
-                        price_date=datetime.now().strftime('%Y-%m-%d') # Using today's date for consistent format
+                        price_date=datetime.now().strftime('%Y-%m-%d'), # Using today's date for consistent format
+                        source=url
                     )
                     print(f"API Result: {result}")
                 else:

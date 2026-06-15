@@ -23,7 +23,7 @@ import logging
 # Get the logger from the parent package
 logger = logging.getLogger('tedata.utils')
 
-def send_to_api(material_name, material_type, material_price, material_unit, material_currency, price_date):
+def send_to_api(material_name, material_type, material_price, material_unit, material_currency, price_date, source=None):
     """
     Send material data to the API endpoint.
     
@@ -34,8 +34,9 @@ def send_to_api(material_name, material_type, material_price, material_unit, mat
         material_unit (str): Unit of the price (e.g., T, kg).
         material_currency (str): Currency of the price (e.g., USD, JPY).
         price_date (str): Date of the price in YYYY-MM-DD format.
+        source (str, optional): Source of the data (e.g., URL).
     """
-    url = "https://ics.chitraparatama.co.id/product/api/apiconnect.php?function=insert_material"
+    url = "https://ics.chitraparatama.com/product/api/apiconnect.php?function=insert_material"
     
     # Ensure price is a clean string/number
     if isinstance(material_price, str):
@@ -47,7 +48,8 @@ def send_to_api(material_name, material_type, material_price, material_unit, mat
         "material_price": material_price,
         "material_unit": material_unit,
         "material_currency": material_currency,
-        "price_date": price_date
+        "price_date": price_date,
+        "source": source
     }
     
     headers = {

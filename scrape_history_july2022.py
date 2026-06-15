@@ -69,7 +69,8 @@ def scrape_history_daily(url, material_name, material_type, material_unit, mater
                         material_price=str(price),
                         material_unit=material_unit,
                         material_currency=material_currency,
-                        price_date=date_str
+                        price_date=date_str,
+                        source=url
                     )
                     if result.get("status") != "error":
                         success_count += 1
@@ -197,7 +198,8 @@ def main():
                                 material_price=str(price),
                                 material_unit=item["unit"],
                                 material_currency=item["currency"],
-                                price_date=date.strftime('%Y-%m-%d')
+                                price_date=date.strftime('%Y-%m-%d'),
+                                source=item["url"]
                             )
                 else:
                     logger.error(f"Could not extract IMARC chart data for {item['name']}")

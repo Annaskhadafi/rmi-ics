@@ -9,7 +9,10 @@ scripts = [
     'scrape_rubber.py',
     'scrape_synthetic_rubber.py',
     'scrape_hrc_steel.py',
-    'scrape_minerba.py'
+    'scrape_minerba.py',
+    'scrape_carbon_black.py',
+    'scrape_sulphur.py',
+    'scrape_drewry.py'
 ]
 
 def run_all():

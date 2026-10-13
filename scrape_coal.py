@@ -86,8 +86,8 @@ def main():
     print(f"Scraping Coal data from {url}...")
     
     # Konfigurasi data komoditas
-    material_name = "Coal"      # Nama material (dapat disesuaikan jika ingin "Batubara")
-    material_type = "Material"  # Tipe material (atau "Mineral" seperti di Minerba)
+    material_name = "Batubara"      # Nama material (dapat disesuaikan jika ingin "Batubara")
+    material_type = "Mineral"  # Tipe material (atau "Mineral" seperti di Minerba)
     material_unit = "T"         # Batubara Newcastle diperdagangkan dalam USD/ton (T)
     material_currency = "USD"
     today_date = datetime.now().strftime('%Y-%m-%d')

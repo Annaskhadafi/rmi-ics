@@ -10,6 +10,7 @@ scripts = [
     'scrape_synthetic_rubber.py',
     'scrape_hrc_steel.py',
     'scrape_minerba.py',
+    'scrape_coal.py',
     'scrape_carbon_black.py',
     'scrape_sulphur.py',
     'scrape_drewry.py'
